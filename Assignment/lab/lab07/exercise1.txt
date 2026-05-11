@@ -1,0 +1,24 @@
+Scenario 1
+    1. 缓存命中率为0，因为缓存大小和步长大小一样，都是32字节。每次写入新数据时，对应index都一致，而tag不同，导致每次都是cache miss
+    2. 0.0
+    3. 步长改为1
+
+Scenario 2
+    1. 2
+    2. MHHH
+    3. 1.0
+
+Scenario 3
+    1. [L1 0.5],[L2 0],[Overall 0.5]
+    2. [32 of L1 accesses], [16 of L1 misses]
+    3. 16
+    4. block size of L2
+    5. =,=,+,=
+
+--- lines below are ignored by the AG ---
+
+Checkoff Question 1: 每次修改的index都一样,tag都不一样，导致一直cache miss
+Checkoff Question 2: block size或者step size
+Checkoff Question 3: 每一次访问，第一次都不在缓存中，因此载入，例如4 5 6 7，然后写入4命中，读取6命中，写入6命中
+Checkoff Question 4: 接近100%，因为数组中所有的元素都在缓存中了
+Checkoff Question 5: 没看到代码，略

@@ -1,0 +1,8 @@
+1. jki, kji
+2. kij, ikj
+
+--- lines below are ignored by the AG ---
+
+Checkoff Question 1: 由于最内侧循环运行次数最多，因此最好保持最内测循环cache hit。由于矩阵按照列存储，每列都是连续的一位数组。最内侧按照i循环，几乎每次都命中，因此效率最高。
+Checkoff Question 2: 同上，最内侧按照j循环，每次都命中不了，访问非常慢。
+Checkoff Question 3: 如果按照列存储，步长是一时最快，一列时最慢

@@ -1,0 +1,21 @@
+--- not autograded ---
+
+Part 1
+    blocksize = 20, n = 100: 0.005, 0.009
+    blocksize = 20, n = 1000: 1.548, 3.243
+    blocksize = 20, n = 2000: 27.205, 15.084
+    blocksize = 20, n = 5000: 224.465, 104.531
+    blocksize = 20, n = 10000: 1362.12, 385.301
+
+    Checkoff Question 1: blocksize = 20, n = 2000
+    Checkoff Question 2: 分块有固定的额外拷贝开销，只有当矩阵大到 naive 版本的 cache miss 代价超过这个开销时，分块才会赢
+
+Part 2
+    blocksize = 50, n = 10000: 1411.43, 326.426
+    blocksize = 100, n = 10000: 1338.65, 285.283
+    blocksize = 500, n = 10000: 1284.1, 211.084
+    blocksize = 1000, n = 10000: 1296.28, 263.592
+    blocksize = 5000, n = 10000: 1315.63, segmentation fault
+
+    Checkoff Question 3:
+    随着分块数量增加，性能先提升后下降，这是由于分块矩阵的数量过多，抵消了缓存命中带来的性能提升
