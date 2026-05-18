@@ -1,0 +1,19 @@
+Exercise 1:
+    1. 32
+    2. 3, 7, 0, 7
+    3. no, yes
+
+Exercise 2:
+    1. 00, 20, 40, 60, 80, A0, C0, E0, 00, 20
+
+Exercise 3:
+    1. Physical Memory Size
+
+--- lines below are ignored by the AG ---
+
+Exercise 1 Checkoff Questions:
+    1. 读取对应的virtual page，在TLB中寻找，未找到。用virtual page找到page table中的对应位置，显示valid bit == 0无效。因此系统给一块新的内存空间，将physical address写入page table对应的位置，在TLB缓存中记录virtual page number和physical page number的对应关系
+    2. 因为物理内存只有4个块，而虚拟内存给了3个块。虚拟内存的大小和物理内存没有一定的关系
+
+Exercise 4 Checkoff Question:
+    1. 这是由于TLB缓存太小
